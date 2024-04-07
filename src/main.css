@@ -1,34 +1,43 @@
-.meme { 
-    position: relative; 
-    width: 59%; 
-    margin: auto; 
-  } 
-    
-  .meme > img { 
+  #myMeme > img { 
     width: 100%; 
   } 
     
-  .meme > h2 { 
+  #myMeme > h2 { 
     position: absolute; 
     width: 80%; 
     text-align: center; 
     left: 50%; 
     transform: translateX(-50%); 
-    margin: 15px 0; 
-    padding: 0 5px; 
-    font-family: impact, sans-serif; 
-    font-size: 1.75em; 
+    margin: 40px 5px; 
+    text-wrap: wrap;
+    padding: 0; 
+    font-family: impact, sans-serif;  
     text-transform: uppercase; 
     color: white; 
     letter-spacing: 1px; 
     text-shadow: 2px 2px 0 #000; 
   } 
-    
-  .meme > .bottom { 
+  @media (min-width: 640px) {
+    #myMeme > h2 {
+        font-size: 1.75em; /* Medium screen size */
+    }
+}
+
+@media (min-width: 768px) {
+  #myMeme > h2 {
+      font-size: 2em; /* Medium screen size */
+  }
+}
+@media (min-width: 1024px) {
+  #myMeme > h2 {
+        font-size: 2.75em; /* Large screen size */
+    }
+}
+#myMeme > .bottom { 
     bottom: 0; 
   } 
     
-  .meme > .top { 
+  #myMeme > .top { 
     top: 0; 
   } 
     
