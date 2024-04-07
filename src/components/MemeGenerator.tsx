@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { useGetData } from "../custom-hooks/FetchData";
 import html2canvas from "html2canvas";
 
