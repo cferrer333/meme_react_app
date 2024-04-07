@@ -8,13 +8,13 @@ interface Props {
 
 const AuthChecker = ({ children }: Props) => {
     const navigate = useNavigate();
-    const { isAuthenticated, isLoading, loginWithRedirect } = useAuth0();
+    const { isAuthenticated, isLoading, loginWithPopup } = useAuth0();
 
     useEffect(() => {
         if (!isLoading && !isAuthenticated) {
-            loginWithRedirect();
+            loginWithPopup();
         }
-    }, [isLoading, isAuthenticated, loginWithRedirect]);
+    }, [isLoading, isAuthenticated, loginWithPopup]);
 
     useEffect(() => {
         if (!isLoading && isAuthenticated) {

@@ -91,16 +91,21 @@ function MemeGenerator() {
                 border rounded border-teal-400 hover:text-black hover:border-black"
           onClick={takeScreenshot}>Download</button></center>
       <br />
-      <div className="container relative w-2/4 mx-auto" id="myContainer">
-      <div className="meme flex flex-col items-center  " id="myMeme">
-            <img src={randomImg} alt="meme" className="w-full"/>
-            <h2 className="top text-lg md:text-xl lg:text-2xl xl:text-3xl ">{topText}</h2>
-            <h2 className="bottom text-lg md:text-xl lg:text-2xl xl:text-3xl ">{bottomText}</h2> 
+      {/* Meme image displayed here */}
+      {(randomImg) && (
+  <div>
+    <div className="container relative w-2/4 mx-auto" id="myContainer">
+      <div className="meme flex flex-col items-center" id="myMeme">
+        <img src={randomImg} alt="meme" className="w-full" />
+        <h2 className="top text-lg md:text-xl lg:text-2xl xl:text-3xl">{topText}</h2>
+        <h2 className="bottom text-lg md:text-xl lg:text-2xl xl:text-3xl">{bottomText}</h2>
       </div>
-      </div>
-    <br/>
-    <br/>
-    <br/>
+    </div>
+    <br />
+    <br />
+    <br />
+  </div>
+)}
     </div>
   );
 };
