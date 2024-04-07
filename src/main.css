@@ -17,6 +17,11 @@
     letter-spacing: 1px; 
     text-shadow: 2px 2px 0 #000; 
   } 
+  @media (min-width: 450px) {
+    #myMeme > h2 {
+        font-size: 1.25em; /* small screen size */
+    }
+}
   @media (min-width: 640px) {
     #myMeme > h2 {
         font-size: 1.75em; /* Medium screen size */
