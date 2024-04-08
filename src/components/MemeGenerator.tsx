@@ -92,20 +92,22 @@ function MemeGenerator() {
           onClick={takeScreenshot}>Download</button></center>
       <br />
       {/* Meme image displayed here */}
-      {(randomImg && topText && bottomText) &&  (
+      
   <div>
     <div className="container relative w-2/4 mx-auto" id="myContainer">
+    {randomImg === "" ? "" : (
       <div className="meme flex flex-col items-center" id="myMeme">
+        
         <img src={randomImg} alt="meme" className="w-full" />
         <h2 className="top text-lg md:text-xl lg:text-2xl xl:text-3xl">{topText}</h2>
         <h2 className="bottom text-lg md:text-xl lg:text-2xl xl:text-3xl">{bottomText}</h2>
       </div>
+    )}
     </div>
     <br />
     <br />
     <br />
   </div>
-)}
     </div>
   );
 };
